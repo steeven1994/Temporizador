@@ -1,0 +1,179 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0e7ee; 
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.timer-container {
+    background-color: #ffffff;
+    padding: 45px 35px; 
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /
+    text-align: center;
+    width: 90%;
+    max-width: 650px; 
+    border: 1px solid #dcdcdc; 
+}
+
+h1 {
+    font-size: 3em; 
+    margin-bottom: 35px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700; 
+}
+
+.input-section {
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.input-section label {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #555;
+}
+
+#targetDateTime {
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    background-color: #f8f8f8; 
+    color: #333;
+    font-size: 1.1em;
+    width: 85%;
+    max-width: 280px;
+    box-sizing: border-box;
+    outline: none; 
+}
+
+#targetDateTime:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); 
+}
+
+#startTimerBtn {
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#startTimerBtn:hover {
+    background-color: #218838;
+    transform: translateY(-2px); 
+}
+
+#startTimerBtn:active {
+    transform: translateY(0); 
+}
+
+.countdown-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px 40px; 
+    margin-bottom: 35px;
+}
+
+.time-unit {
+    font-size: 4.5em; 
+    font-weight: bold;
+    color: #ffffff; 
+    background-color: #007bff; 
+    padding: 20px 30px;
+    border-radius: 10px;
+    min-width: 110px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3); 
+    transition: transform 0.2s ease-in-out;
+}
+
+.time-unit.update {
+    transform: scale(1.05);
+}
+
+.unit-label {
+    font-size: 1.3em;
+    color: #777; 
+    text-transform: uppercase;
+    margin-top: 8px;
+    flex-basis: 100%;
+}
+
+@media (max-width: 680px) {
+    .timer-container {
+        padding: 30px 20px;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    .countdown-display {
+        gap: 15px 25px;
+    }
+    .time-unit {
+        font-size: 3.5em;
+        padding: 15px 25px;
+        min-width: 90px;
+    }
+    .unit-label {
+        font-size: 1.1em;
+    }
+    .input-section {
+        gap: 10px;
+    }
+    #targetDateTime, #startTimerBtn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+    .countdown-display {
+        flex-direction: column; 
+        gap: 15px;
+    }
+    .time-unit {
+        font-size: 3em;
+        min-width: unset; 
+        width: 80%;
+        max-width: 200px;
+        padding: 15px;
+    }
+    .unit-label {
+        margin-top: -5px; 
+    }
+}
+
+.message {
+    font-size: 1.6em;
+    color: #ffc107;
+    font-weight: bold;
+    margin-top: 25px;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

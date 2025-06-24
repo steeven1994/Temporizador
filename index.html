@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador de Cuenta Regresiva Personalizable</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="timer-container">
+        <h1>Cuenta Regresiva</h1>
+
+        <div class="input-section">
+            <label for="targetDateTime">Establece la fecha y hora final:</label>
+            <input type="datetime-local" id="targetDateTime">
+            <button id="startTimerBtn">Iniciar Temporizador</button>
+        </div>
+
+        <div id="countdown" class="countdown-display">
+            <span class="time-unit" id="days">00</span>
+            <span class="unit-label">Días</span>
+            <span class="time-unit" id="hours">00</span>
+            <span class="unit-label">Horas</span>
+            <span class="time-unit" id="minutes">00</span>
+            <span class="unit-label">Minutos</span>
+            <span class="time-unit" id="seconds">00</span>
+            <span class="unit-label">Segundos</span>
+        </div>
+        <p id="message" class="message"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
